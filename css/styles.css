@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 /*============================
@@ -13,7 +13,7 @@ body {
   position: relative;
   width: 100%;
   height: 100vh; /* Ocupa 100% da altura da tela */
-  background: url("/Design\ sem\ nome.png") no-repeat center center/cover;
+  background: url('/imagens/biografia\ \(1\).png') no-repeat center center;
 }
 
 .overlay {
@@ -91,7 +91,7 @@ body {
 =============================*/
 #contato {
   background-color: #000; /* Fundo preto */
-  color: #fff;           /* Texto branco */
+  color: #fff; /* Texto branco */
   padding: 60px 0;
 }
 
@@ -124,7 +124,7 @@ body {
 /* Botão "Enviar" */
 #contato button[type="submit"] {
   background-color: #fff; /* Botão claro */
-  color: #000;           /* Texto preto no botão */
+  color: #000; /* Texto preto no botão */
   border: none;
   padding: 10px 20px;
   margin-top: 10px;
@@ -137,9 +137,9 @@ body {
 }
 
 .biografia {
-    /* A imagem de fundo que você usava inline */
-    background: url('/biografia (1).png') no-repeat center center;
-    background-size: cover;
+  /* A imagem de fundo que você usava inline */
+  background: url("/imagens/biografia\ \(1\).png") no-repeat center center;
+  background-size: cover;
 }
 
 /*============================
