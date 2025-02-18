@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/*============================
+  HERO SECTION
+=============================*/
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Ocupa 100% da altura da tela */
+  background: url("/Design\ sem\ nome.png") no-repeat center center/cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/*============================
+  NAVBAR
+=============================*/
+.navbar {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: transparent !important;
+}
+
+.navbar-brand {
+  color: white !important;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  color: white !important;
+  margin-right: 20px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #a0a0a0 !important;
+  transform: translateY(-3px);
+}
+
+.social-icons a {
+  color: white;
+  margin-left: 15px;
+  font-size: 18px;
+}
+
+.social-icons a:hover {
+  color: #f39c12;
+}
+
+/*============================
+  HERO TEXT
+=============================*/
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.hero-text p {
+  font-size: 20px;
+  letter-spacing: 5px;
+}
+
+/*============================
+  CONTATO
+=============================*/
+#contato {
+  background-color: #000; /* Fundo preto */
+  color: #fff;           /* Texto branco */
+  padding: 60px 0;
+}
+
+/* Títulos e textos */
+#contato h2 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+#contato p {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+/* Inputs e textarea */
+#contato .form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #fff; /* Linha branca abaixo */
+  border-radius: 0;
+  color: #ffffff;
+}
+
+/* Remover efeito de focus azul e manter cor clara */
+#contato .form-control:focus {
+  box-shadow: none;
+  border-color: #ccc;
+}
+
+/* Botão "Enviar" */
+#contato button[type="submit"] {
+  background-color: #fff; /* Botão claro */
+  color: #000;           /* Texto preto no botão */
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contato button[type="submit"]:hover {
+  background-color: #e2e2e2; /* Leve mudança de cor no hover */
+}
+
+.biografia {
+    /* A imagem de fundo que você usava inline */
+    background: url('/biografia (1).png') no-repeat center center;
+    background-size: cover;
+}
+
+/*============================
+  BOTÃO VOLTAR AO TOPO
+=============================*/
+#btnScrollTop {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #efcc41 0%, #f5576c 100%);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none; /* inicia oculto */
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 9999; /* fica acima de outros elementos */
+}
+
+#btnScrollTop:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+#btnScrollTop.show {
+  display: flex; /* muda de "none" para "flex", mostrando o botão */
+}
+
+/*============================
+  MEDIA QUERIES
+=============================*/
+
+/* 
+  Ajustes para telas até 992px (por exemplo, tablets e desktops menores):
+  - Reduz tamanho do título na hero
+  - Reduz tamanho do texto na hero
+*/
+@media (max-width: 992px) {
+  .hero-text h1 {
+    font-size: 40px;
+  }
+  .hero-text p {
+    font-size: 16px;
+    letter-spacing: 3px;
+  }
+}
+
+/*
+  Ajustes para telas até 768px (tablets menores e celulares maiores):
+  - Ajusta a altura da hero
+  - Centraliza hero-text
+  - Diminui padding da seção de contato
+*/
+@media (max-width: 768px) {
+  .hero {
+    height: auto; /* Permite que a hero expanda conforme o conteúdo */
+    padding: 100px 0; /* Espaçamento extra caso o conteúdo fique maior */
+  }
+  .hero-text {
+    position: static;
+    transform: none;
+    text-align: center;
+    margin-top: 20px;
+  }
+  #contato {
+    padding: 40px 0; /* Reduz um pouco o padding em telas menores */
+  }
+}
+
+/*
+  Ajustes para telas até 576px (celulares pequenos):
+  - Título ainda menor
+  - Texto ainda menor
+  - Ajustes adicionais se necessário
+*/
+@media (max-width: 576px) {
+  .hero-text h1 {
+    font-size: 30px;
+  }
+  .hero-text p {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+  /* Se quiser reduzir o tamanho do logotipo, por exemplo */
+  .navbar-brand {
+    font-size: 20px;
+  }
+}
